@@ -1,7 +1,7 @@
 import Grid from '@/components/Grid'
 import Hero from '@/components/Hero'
-import {FloatingNav} from '@/components/ui/FloatingNav'
-import {FaHome} from 'react-icons/fa'
+import { FloatingNav } from '@/components/ui/FloatingNav'
+import { FaHome } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <div className="w-full max-w-7xl">
         <FloatingNav
           className=""
-          navItems={[{name: 'Home', link: '/', icon: <FaHome />}]}
+          navItems={[{ name: 'Home', link: '/', icon: <FaHome /> }]}
         />
         <Hero />
         <Grid />

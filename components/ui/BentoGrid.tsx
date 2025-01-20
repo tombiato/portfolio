@@ -1,13 +1,15 @@
 'use client'
 
 import animationData from '@/data/confetti.json'
-import {cn} from '@/lib/utils'
-import {useState} from 'react'
-import Lottie from 'react-lottie'
-import {BackgroundGradientAnimation} from './BackgroundGradientAnimation'
-import {GlobeDemo as GridGlobe} from './GridGlobe'
+import { cn } from '@/lib/utils'
+import dynamic from 'next/dynamic'
+import { useState } from 'react'
+import { IoCopyOutline } from 'react-icons/io5'
+import { BackgroundGradientAnimation } from './BackgroundGradientAnimation'
+import { GlobeDemo as GridGlobe } from './GridGlobe'
 import MagicButton from './MagicButton'
-import {IoCopyOutline} from 'react-icons/io5'
+
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false })
 
 export const BentoGrid = ({
   className,

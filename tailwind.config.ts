@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import type {Config} from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 
 import svgToDataUri from 'mini-svg-data-uri'
 
 import colors from 'tailwindcss/colors'
-import {default as flattenColorPalette} from 'tailwindcss/lib/util/flattenColorPalette'
+import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
 
 const config = {
   darkMode: ['class'],
@@ -84,12 +84,12 @@ const config = {
       },
       keyframes: {
         'accordion-down': {
-          from: {height: '0'},
-          to: {height: 'var(--radix-accordion-content-height)'},
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {height: 'var(--radix-accordion-content-height)'},
-          to: {height: '0'},
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
         spotlight: {
           '0%': {
@@ -166,7 +166,7 @@ const config = {
   plugins: [
     require('tailwindcss-animate'),
     addVariablesForColors,
-    function ({matchUtilities, theme}: any) {
+    function ({ matchUtilities, theme }: any) {
       matchUtilities(
         {
           'bg-grid': (value: any) => ({
@@ -185,13 +185,13 @@ const config = {
             )}")`,
           }),
         },
-        {values: flattenColorPalette(theme('backgroundColor')), type: 'color'}
+        { values: flattenColorPalette(theme('backgroundColor')), type: 'color' }
       )
     },
   ],
 } satisfies Config
 
-function addVariablesForColors({addBase, theme}: any) {
+function addVariablesForColors({ addBase, theme }: any) {
   const allColors = flattenColorPalette(theme('colors'))
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])

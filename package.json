@@ -6,6 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "prettier": "prettier --write .",
     "lint": "next lint"
   },
   "dependencies": {
@@ -23,7 +24,7 @@
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.172.0",
-    "three-globe": "^2.40.4"
+    "three-globe": "^2.41.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
